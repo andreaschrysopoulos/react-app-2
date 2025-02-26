@@ -2,11 +2,35 @@ import React from 'react'
 import Navlink from "./Navlink"
 import { Link } from "react-router-dom"
 import { links } from '../data/siteMap'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function Navbar() {
 
-  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false)
+  const burgerIconRef = useRef(null); // Initialize with null
+  const burgerMenuRef = useRef(null); // Initialize with null
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        burgerIconRef.current && // Check if element is available
+        burgerMenuRef.current && // Check if element is available
+        !burgerIconRef.current.contains(e.target) &&
+        !burgerMenuRef.current.contains(e.target)
+      ) {
+        setShowBurgerMenu(false);
+      }
+    };
+
+    // Add event listener when component mounts
+    document.addEventListener('click', handleClickOutside);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []); // Empty dependency array means this runs only once after the initial render
+
 
   return (
     <nav className='bg-stone-50/80 backdrop-blur-xl dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 transition-all duration-200'>
@@ -32,14 +56,14 @@ function Navbar() {
         </div>
 
         {/* 3. Bars Icon */}
-        <div className="w-full medium:hidden flex justify-end items-center" onClick={() => (setShowBurgerMenu((prevState) => !prevState))}>
-          <div className="fa fa-bars cursor-pointer"></div>
+        <div className="w-full medium:hidden flex justify-end items-center" >
+          <div ref={burgerIconRef} className="fa fa-bars cursor-pointer p-3 pr-5 mr-[-20px]" onClick={() => (setShowBurgerMenu((prevState) => !prevState))}></div>
         </div>
       </div>
 
       {/* Mobile/Vertical Navigation Bar */}
-      <div className={`transition-all flex-col w-full max-w-5xl py-3 text-xl ${showBurgerMenu ? "flex" : "hidden"}`}>
-        {links.map(link => <Link key={link.key} className="cursor-pointer group flex w-full justify-end" to={link.to}>
+      <div ref={burgerMenuRef} className={`transition-all flex-col w-full max-w-5xl py-3 text-xl ${showBurgerMenu ? "flex" : "hidden"}`}>
+        {links.map(link => <Link key={link.key} className="cursor-pointer group flex w-full justify-end" to={link.to} onClick={() => setShowBurgerMenu(false)}>
           <Navlink name={link.pageName} />
         </Link>)}
       </div>
