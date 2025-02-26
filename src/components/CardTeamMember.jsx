@@ -75,7 +75,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
             <img className="w-50 rounded-full mb-5" src={img} alt="photo" />
             <div className="flex flex-col justify-center">
               <span className="font-medium dark:text-stone-300 text-stone-700">{role}</span>
-              <span className="text-2xl font-semibold mb-7">{name}</span>
+              <span className="text-3xl font-semibold mb-7">{name}</span>
             </div>
           </div>
           <span className="text-justify">{bio}</span>
