@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import Copyright from '../components/Copyright'
-import Widgets from "../components/Widgets"
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Copyright from "../components/Copyright";
+import Widgets from "../components/Widgets";
 
 const Layout = () => {
   return (
@@ -11,7 +11,7 @@ const Layout = () => {
       <Widgets />
       <Copyright />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

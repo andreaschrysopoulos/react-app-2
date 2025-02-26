@@ -1,8 +1,6 @@
-import React from 'react'
-
 const Article = ({ category, title, date, picture }) => {
   return (
-    <a href="" className='cursor-pointer hover:scale-[1.01] transition-all duration-300 ease-in-out max-w-70 w-70 h-full'>
+    <a href="" className='cursor-pointer hover:scale-[1.01] transition-all duration-300 ease-in-out max-w-85 min-w-70 h-full'>
 
       {/* Container */}
       <div className='flex flex-col h-full rounded-4xl bg-white dark:bg-stone-900'>
