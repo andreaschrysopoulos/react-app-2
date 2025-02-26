@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex-1 pr-10">
           <Breadcrums />
         </div>
-        <span className="min-w-max">Copyright &copy; 2025 Inefan.</span>
+        <span className="min-w-max">&copy; 2025 Inefan</span>
       </div>
     </footer>
   );

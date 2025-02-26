@@ -57,7 +57,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
         />
 
         {/* Info Container */}
-        <div className="pt-3 pb-4 px-7 flex flex-col">
+        <div className="p-7 pt-5 flex flex-col">
           <span className="font-medium dark:text-stone-300 text-stone-700">
             {role}
           </span>
@@ -69,13 +69,14 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
       {/* Popup */}
       <div ref={popup} className={`overflow-x-auto p-10 fixed h-dvh w-dvw bg-white/5 top-0 left-0 z-50 backdrop-blur-sm ${popupState ? 'flex' : 'hidden'}`}>
 
-        <div className="flex flex-col items-center h-max w-150 bg-white text-black p-10 m-auto rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col items-center h-max w-150 bg-stone-200 dark:bg-stone-900 text-black dark:text-white p-10 m-auto rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.3)]">
 
-          <div className="flex gap-5">
-            <img className="w-50 rounded-full mb-5" src={img} alt="photo" />
+          <div className="flex flex-wrap gap-5 justify-center w-auto mb-7">
+            <img className="w-50 rounded-full" src={img} alt="photo" />
             <div className="flex flex-col justify-center">
               <span className="font-medium dark:text-stone-300 text-stone-700">{role}</span>
-              <span className="text-3xl font-semibold mb-7">{name}</span>
+              <span className="text-3xl font-semibold mb-2">{name}</span>
+              <a href={linkedin} target="_blank" className="size-fit h-6 w-6 opacity-90 hover:opacity-100 transition-al duration-200"><img className="" src="/linkedin-light-blue.png" alt="linkedn-img" /></a>
             </div>
           </div>
           <span className="text-justify">{bio}</span>
