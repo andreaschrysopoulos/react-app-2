@@ -1,9 +1,7 @@
-import React from 'react'
-
 const About = () => {
   return (
     // About Page
-    <div className='flex flex-auto flex-col items-center max-w-5xl pb-20 mx-5 gap-13'>
+    <div className='flex flex-auto self-center flex-col items-center max-w-5xl pb-20 mx-5 gap-13'>
       <span className='font-semibold text-6xl self-start dark:text-white'>About us</span>
 
       {/* card */}
