@@ -1,12 +1,14 @@
 const Article = ({ category, title, date, picture }) => {
   return (
-    <a href="" className='cursor-pointer hover:scale-[1.01] transition-all duration-300 ease-in-out max-w-85 min-w-70 h-full'>
+    <a href="" className='cursor-pointer max-w-78 min-w-70 h-full'>
 
       {/* Container */}
-      <div className='flex flex-col h-full rounded-4xl bg-white dark:bg-stone-900'>
+      <div className='group flex flex-col h-full rounded-4xl bg-white dark:bg-stone-900'>
 
         {/* 1. Photo */}
-        <img className='h-43 min-h-43 object-cover rounded-tl-4xl rounded-tr-4xl' src={picture}/>
+        <div className="h-43 min-h-43 overflow-hidden rounded-tl-4xl rounded-tr-4xl">
+          <img className='size-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.03]' src={picture} />
+        </div>
 
 
         {/* 2. Description */}
