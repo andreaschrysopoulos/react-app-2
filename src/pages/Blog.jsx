@@ -42,7 +42,7 @@ const Blog = () => {
     if (filteredArticles.some((article) => article !== null))
       return filteredArticles
     else
-      return <div className='max-w-78 min-w-78 h-full'>No matching articles found.</div>
+      return <div className='max-w-78 min-w-78 h-full text-lg opacity-80'>No matching articles found.</div>
 
   }
 
