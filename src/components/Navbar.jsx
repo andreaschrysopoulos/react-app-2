@@ -5,15 +5,19 @@ import { useState, useEffect, useRef } from "react";
 
 function Navbar() {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
-  const burgerIconRef = useRef(null); // Initialize with null
+  const burgerIconLightRef = useRef(null); // Initialize with null
+  const burgerIconDarkRef = useRef(null); // Initialize with null
   const burgerMenuRef = useRef(null); // Initialize with null
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        burgerIconRef.current && // Check if element is available
+        (burgerIconLightRef.current && // Check if element is available
+        burgerIconDarkRef.current) && // Check if element is available
         burgerMenuRef.current && // Check if element is available
-        !burgerIconRef.current.contains(e.target) &&
+
+        (!burgerIconLightRef.current.contains(e.target) &&
+        !burgerIconDarkRef.current.contains(e.target)) &&
         !burgerMenuRef.current.contains(e.target)
       ) {
         setShowBurgerMenu(false);
@@ -33,14 +37,14 @@ function Navbar() {
     <nav className="bg-stone-50/80 backdrop-blur-xl dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 transition-all duration-200">
 
       {/* Container */}
-      <div className="py-1 flex max-w-5xl justify-between w-full gap-5">
+      <div className="py-1 flex max-w-5xl justify-between items-center w-full gap-5">
 
         {/* 1. Logo */}
         <Link to="/" className="">
 
           {/* 1.1 Light Logo */}
           <img
-            className="hover:drop-shadow-[0px_0px_20px_rgba(0,0,0,0.3)] transition-all duration-200 ease-in-out py-2 cursor-pointer w-28 min-w-28 block dark:hidden"
+            className="hover:drop-shadow-[0px_0px_20px_rgba(0,0,0,0.3)] transition-all duration-200 ease-in-out py-2 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden"
             src="/inefanLogo-light.png"
             alt="inefan logo"
             title="Homepage"
@@ -48,7 +52,7 @@ function Navbar() {
 
           {/* 1.2 Dark Logo */}
           <img
-            className="hover:drop-shadow-[0px_0px_10px_rgba(255,255,255,0.3)] transition-all duration-200 ease-in-out py-2 cursor-pointer w-28 min-w-28 hidden dark:block"
+            className="hover:drop-shadow-[0px_0px_10px_rgba(255,255,255,0.3)] transition-all duration-200 ease-in-out py-2 cursor-pointer team2:max-w-28 max-w-22 hidden dark:block"
             src="/inefanLogo-dark.png"
             alt="inefan logo"
             title="Homepage"
@@ -66,11 +70,18 @@ function Navbar() {
 
         {/* 3. Bars Icon */}
         <div className="w-full team2:hidden flex justify-end items-center">
-          <div
-            ref={burgerIconRef}
-            className="fa fa-bars cursor-pointer p-3 pr-5 mr-[-20px]"
+          <img
+            src="/menu-light.svg"
+            ref={burgerIconLightRef}
+            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-50 hover:opacity-90 transition-all duration-200 block dark:hidden"
             onClick={() => setShowBurgerMenu((prevState) => !prevState)}
-          ></div>
+          ></img>
+          <img
+            src="/menu-dark.svg"
+            ref={burgerIconDarkRef}
+            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-70 hover:opacity-100 transition-all duration-200 hidden dark:block"
+            onClick={() => setShowBurgerMenu((prevState) => !prevState)}
+          ></img>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 const Newsletter = () => {
   return (
     <div className="flex flex-col gap-3 justify-center h-full max-w-sm w-full">
-      <span className="text-white text-2xl font-semibold w-full text-center min-w-[270px]">
+      <span className="text-white team2:text-2xl text-xl font-semibold w-full text-center min-w-[270px]">
         Subscribe to our newsletter!
       </span>
       <form
