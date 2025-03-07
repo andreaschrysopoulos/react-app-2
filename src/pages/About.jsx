@@ -2,7 +2,7 @@ const About = () => {
   return (
     // About Page
     <div className='flex flex-auto self-center flex-col items-center max-w-5xl pb-20 mx-5 gap-13'>
-      <span className='font-semibold text-6xl self-start dark:text-white'>About us</span>
+      <span className='font-semibold text-6xl self-start'>About us</span>
 
       {/* card */}
       <div className="flex flex-wrap justify-center items-center gap-x-15 gap-y-8 pb-10">
@@ -10,8 +10,8 @@ const About = () => {
         <div className="flex-[1_0_280px] aspect-[16/9] overflow-hidden">
           <img className='rounded-md w-full h-full object-cover' src="/about-2.jpg" alt="picture" />
         </div>
-        <div className='flex-[1_0_280px] flex flex-col gap-5 dark:text-white'>
-          <div className='font-semibold lg:text-4xl text-3xl dark:text-white'>What is Inefan?</div>
+        <div className='flex-[1_0_280px] flex flex-col gap-5'>
+          <div className='font-semibold lg:text-4xl text-3xl'>What is Inefan?</div>
           <div className="text-lg">Inefan (Independent Economic & Financial Analysis) is a non-profit association founded by a group of students and graduates from the Department of Economics at Aristotle University of Thessaloniki.</div>
         </div>
 
@@ -19,8 +19,8 @@ const About = () => {
 
       <div className="flex flex-wrap-reverse justify-center items-center gap-x-15 gap-y-8">
 
-        <div className='flex-[1_0_280px] flex flex-col gap-5 dark:text-white'>
-          <div className='font-semibold lg:text-4xl text-3xl dark:text-white'>What we do:</div>
+        <div className='flex-[1_0_280px] flex flex-col gap-5'>
+          <div className='font-semibold lg:text-4xl text-3xl'>What we do:</div>
 
           <ul className="text-lg list-disc pl-5">
             <li>We organize seminars and conferences on economic topics.</li>

@@ -7,15 +7,14 @@ export const ReportTitle = ({ title, track, highlight, setHighlight }) => {
   )
 }
 
-export const ReportContent = ({ title, track, highlight, description, subtitle }) => {
+export const ReportContent = ({ title, track, highlight, description, subtitle, download }) => {
 
   return (
     <>
       <span track={track} className={`text-3xl font-semibold mb-1 ${highlight === track ? "" : "hidden"}`}>{`${title}`}</span>
       <span className={`text-sm text-stone-500 mb-4 font-medium ${highlight === track ? "" : "hidden"}`}>{subtitle}</span>
-      <div className={`mb-2 ${highlight === track ? "" : "hidden"}`}>
-        {description}
-      </div>
+      <div dangerouslySetInnerHTML={{__html: description}} className={`mb-6 ${highlight === track ? "" : "hidden"}`} />
+      <a className={`transition-colors duration-200 ease-in-out font-medium w-fit dark:text-blue-500/90 text-blue-500/90 hover:dark:text-blue-400/90 hover:text-blue-600/90 ${highlight === track ? "" : "hidden"}`} href={download}>Download Report</a>
     </>
   )
 }

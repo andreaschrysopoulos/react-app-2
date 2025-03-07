@@ -2,28 +2,28 @@ export const reports = [
   {
     key: 13,
     short_title: "Report #13",
-    title: "Week 9",
-    subtitle: "February 24, 2025 - February 28, 2025",
+    title: "Outlook Report #13 - Week 9 of 2025",
+    subtitle: "February 24 - February 28, 2025",
     date: "2025-02-28",
-    description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong></strong>February 24, 2025 - February 28, 2025. The content is distributed exclusively for informational purposes by the Inefan Economists' Association. You can find out more about the weekly report below:",
+    description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong>February 24, 2025 - February 28, 2025</strong>.<br><br>The content is distributed exclusively for informational purposes by the Inefan Economists' Association.<br><br>For additional details and insights, explore the full Weekly Outlook Report below:",
     pdf: "/report13.pdf"
   },
   {
     key: 12,
     short_title: "Report #12",
-    title: "Week 8",
-    subtitle: "Mon 17 - Fri 22 February, 2025",
+    title: "Outlook Report #12 - Week 8 of 2025",
+    subtitle: "February 17 - February 22, 2025",
     date: "2025-02-22",
-    description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of February 17, 2025 - February 22, 2025. The content is distributed exclusively for informational purposes by the Inefan Economists' Association. You can find out more about the weekly report below:",
+    description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong>February 17, 2025 - February 22, 2025</strong>.<br><br>The content is distributed exclusively for informational purposes by the Inefan Economists' Association.<br><br>For additional details and insights, explore the full Weekly Outlook Report below:",
     pdf: "/report12.pdf"
   },
   {
     key: 11,
     short_title: "Report #11",
-    title: "Week 7",
-    subtitle: "February 10-14, 2025",
+    title: "Outlook Report #11 - Week 7 of 2025",
+    subtitle: "February 10 - February 14, 2025",
     date: "2025-02-14",
-    description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of February 10, 2025 - February 14, 2025. The content is distributed exclusively for informational purposes by the Inefan Economists' Association. You can find out more about the weekly report below:",
+    description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong>February 10, 2025 - February 14, 2025</strong>.<br><br>The content is distributed exclusively for informational purposes by the Inefan Economists' Association.<br><br>For additional details and insights, explore the full Weekly Outlook Report below:",
     pdf: "/report11.pdf"
   },
 ]

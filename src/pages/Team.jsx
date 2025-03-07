@@ -4,11 +4,11 @@ import { members } from "../assets/database";
 const Team = () => {
   return (
     <>
-      <div className="flex flex-auto dark:text-white pb-20 px-5">
+      <div className="flex flex-auto pb-20 px-5">
         <div className="flex flex-col gap-8 mx-auto max-w-6xl">
 
           {/* Page Header */}
-          <span className="team3:text-6xl text-5xl font-semibold pb-3 dark:text-white self-start w-min team2:w-full">
+          <span className="team3:text-6xl text-5xl font-semibold pb-3 self-start w-min team2:w-full">
             Board of Directors
           </span>
 

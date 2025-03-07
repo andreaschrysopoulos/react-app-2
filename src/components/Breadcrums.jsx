@@ -11,19 +11,19 @@ const Breadcrums = () => {
 
   return (
     <div className="flex w-max justify-start items-center">
-      <Link className="cursor-pointer hover:underline font-semibold dark:text-white" to="/">Inefan</Link>
+      <Link className="cursor-pointer hover:underline font-semibold" to="/">Inefan</Link>
 
       {
         (links.every(link => link.to !== location.pathname) && (location.pathname !== "/")) ?
           (<>
             <img src="/rightArrowWhite.svg" className="px-2 opacity-50" alt="breadcrumb separator" />
-            <span className='dark:text-white'>Not Found</span>
+            <span className=''>Not Found</span>
           </>) :
           urls.map(url => (
             links.map(link => (
               (link.to === url) && (
                 <React.Fragment key={link.key}>
-                  <img src="/rightArrowWhite.svg" className="px-2 opacity-50" alt="breadcrumb separator" /><Link className="hover:underline dark:text-white" to={link.to}>{link.pageName}</Link>
+                  <img src="/rightArrowWhite.svg" className="px-2 opacity-50" alt="breadcrumb separator" /><Link className="hover:underline" to={link.to}>{link.pageName}</Link>
                 </React.Fragment>
               )
             ))

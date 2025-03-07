@@ -47,11 +47,11 @@ const Articles = () => {
 
 
   return (
-    <div className='flex-auto flex justify-start pb-15 px-5'>
+    <div className='mt-12 flex-auto flex flex-col justify-start pb-15 px-5'>
       <div className="max-w-5xl mx-auto flex flex-col gap-10">
 
         {/* Page Header */}
-        <span className='font-semibold text-6xl dark:text-white'>Articles</span>
+        <span className='font-semibold text-6xl'>Articles</span>
 
         {/* Filter */}
         <BlogFilter selected={selected} setSelected={setSelected} />
