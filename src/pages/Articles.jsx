@@ -3,7 +3,7 @@ import { articles } from '../assets/database'
 import BlogFilter from '../components/BlogFilter'
 import { useState, useRef } from 'react'
 
-const Blog = () => {
+const Articles = () => {
 
   const [selected, setSelected] = useState([])
   const articleContainerRef = useRef(null)
@@ -43,7 +43,6 @@ const Blog = () => {
       return filteredArticles
     else
       return <div className='max-w-78 min-w-78 h-full text-lg opacity-80'>No matching articles found.</div>
-
   }
 
 
@@ -67,4 +66,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Articles
