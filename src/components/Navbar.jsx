@@ -34,7 +34,7 @@ function Navbar() {
   }, []); // Empty dependency array means this runs only once after the initial render
 
   return (
-    <nav className="bg-stone-50/80 backdrop-blur-xl dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 transition-all duration-200">
+    <nav className="bg-stone-50/80 backdrop-blur-xl dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5">
 
       {/* Container */}
       <div className="py-1 flex max-w-5xl justify-between items-center w-full gap-5">

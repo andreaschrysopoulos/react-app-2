@@ -58,7 +58,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
 
   return (
     <>
-      <div ref={card} className="group cursor-pointer flex flex-col h-full max-w-78 min-w-70 rounded-4xl bg-white dark:bg-stone-900">
+      <div ref={card} className="group cursor-pointer flex flex-col h-full max-w-78 min-w-78 rounded-4xl bg-white dark:bg-stone-900">
 
         {/* Photo */}
         <div className="h-75 overflow-hidden rounded-tl-4xl rounded-tr-4xl">
@@ -82,7 +82,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
       {/* Popup */}
       <div ref={popup} className={`overflow-x-auto p-5 team3:pt-20 pt-10 fixed h-dvh w-dvw bg-white/5 dark:bg-black/5 top-0 left-0 z-50 backdrop-blur-lg ${popupState ? 'flex' : 'hidden'}`}>
 
-        <div className="relative flex flex-col h-max team3:w-180 team2:w-150 w-115 bg-white dark:bg-stone-800 text-black dark:text-white p-0 team3:p-6 mx-auto rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)]">
+        <div className="relative flex flex-col h-max team3:w-180 team2:w-150 w-115 bg-white dark:bg-stone-800 p-0 team3:p-6 mx-auto rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)]">
 
           <img ref={popupCloseBtnLight} src="/close-light.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-50 transition-all duration-200 self-end block dark:hidden"></img>
           <img ref={popupCloseBtnDark} src="/close-dark.svg" className="absolute cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-60 transition-all duration-200 self-end hidden dark:block"></img>
