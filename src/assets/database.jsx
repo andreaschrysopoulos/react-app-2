@@ -1,6 +1,6 @@
 export const reports = [
   {
-    key: 13,
+    key: "13",
     short_title: "Report #13",
     title: "Outlook Report #13 - Week 9 of 2025",
     subtitle: "February 24 - February 28, 2025",
@@ -9,7 +9,7 @@ export const reports = [
     pdf: "/report13.pdf"
   },
   {
-    key: 12,
+    key: "12",
     short_title: "Report #12",
     title: "Outlook Report #12 - Week 8 of 2025",
     subtitle: "February 17 - February 22, 2025",
@@ -18,7 +18,7 @@ export const reports = [
     pdf: "/report12.pdf"
   },
   {
-    key: 11,
+    key: "11",
     short_title: "Report #11",
     title: "Outlook Report #11 - Week 7 of 2025",
     subtitle: "February 10 - February 14, 2025",
@@ -81,42 +81,42 @@ export const members = [
 
 export const articles = [
   {
-    category: "INTERNATIONAL",
+    category: "international",
     title: "Crises and Turmoil in the Oil Industry",
     date: "February 14, 2025",
     picture: "/blog-1.png",
     key: "a1",
   },
   {
-    category: "ECONOMICS",
+    category: "economics",
     title: "Seeking a New Productive Model",
     date: "November 29, 2024",
     picture: "blog-2.png",
     key: "a2",
   },
   {
-    category: "ECONOMICS",
+    category: "economics",
     title: "The Demographic Problem of Greece",
     date: "June 4, 2024",
     picture: "blog-3.jpg",
     key: "a3",
   },
   {
-    category: "BUSINESS",
+    category: "business",
     title: "Why Sustainable Development? A Case Study of H&M",
     date: "May 29, 2024",
     picture: "blog-4.jpg",
     key: "a4",
   },
   {
-    category: "INTERNATIONAL",
+    category: "international",
     title: "The Economic Consequences of the War in Ukraine",
     date: "May 29, 2024",
     picture: "blog-5.jpg",
     key: "a5",
   },
   {
-    category: "INTERNATIONAL",
+    category: "international",
     title: "How Demographics Affect China's Economy",
     date: "February 29, 2024",
     picture: "blog-6.jpg",
