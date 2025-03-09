@@ -2,10 +2,17 @@ import React from "react"
 import { reports } from "../assets/database"
 import { useState, useRef, useEffect } from "react"
 import { ReportTitle, ReportContent } from "../components/Report"
+import { useSearchParams } from "react-router-dom"
 
 const Reports = () => {
 
-  const [highlight, setHighlight] = useState(reports[0].key)
+  const [searchParams, setSearchParams] = useSearchParams({ id: reports[0].key })
+  const [highlight, setHighlight] = useState(reports.some(report => report.key === searchParams.get('id')) ? searchParams.get('id') : reports[0].key);
+
+  useEffect(() => {
+    if (searchParams.get('id') !== highlight)
+      setSearchParams({ id: highlight }, { replace: true })
+  }, [highlight, setSearchParams])
 
   return (
     <div className="flex flex-auto px-5 pb-10">
@@ -21,7 +28,7 @@ const Reports = () => {
           {/* Reports */}
           <div className="flex flex-col min-w-fit text-sm p-2 mr-3 dark:bg-stone-900 bg-stone-200 rounded-3xl dark:text-stone-200 text-stone-900">
             {reports.map(report =>
-              <ReportTitle title={report.short_title} key={report.key} track={report.key} highlight={highlight} setHighlight={setHighlight} />
+              <ReportTitle title={report.short_title} key={report.key} track={report.key} highlight={highlight} setHighlight={setHighlight} setSearchParams={setSearchParams} />
             )}
           </div>
 

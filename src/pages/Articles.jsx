@@ -1,33 +1,47 @@
 import Article from '../components/Article'
 import { articles } from '../assets/database'
 import BlogFilter from '../components/BlogFilter'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 const Articles = () => {
 
-  const [selected, setSelected] = useState([])
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  const [selected, setSelected] = useState(() => {
+    return searchParams.getAll("category").filter(Boolean)
+  })
   const articleContainerRef = useRef(null)
+
+  useEffect(() => {
+    if (selected.length > 0) {
+      setSearchParams({category: selected}, {replace: true})
+    } else {
+      setSearchParams({}, {relative: true})
+    }
+  }, [selected, setSearchParams])
+
 
   const displayArticles = () => {
 
-    // If no filter is selected, display all articles
+    // If no filter is active, display all articles
     if (!selected.length) {
       return articles.map(article =>
         <Article
           key={article.key}
-          category={article.category}
+          category={article.category.toUpperCase()}
           title={article.title}
           picture={article.picture}
           date={article.date}
         />)
     }
 
-    // If filter is selected, display only matching articles
+    // If filter is active, put matching articles in variable
     const filteredArticles = articles.map(article => {
       if (selected.includes(article.category)) {
         return <Article
           key={article.key}
-          category={article.category}
+          category={article.category.toUpperCase()}
           title={article.title}
           picture={article.picture}
           date={article.date}
@@ -37,17 +51,17 @@ const Articles = () => {
         return null
     })
 
-
-    console.log(filteredArticles)
+    // If variable is not made of null values, matching articles were found, so display them.
+    // Otherwise show "No articles found."
     if (filteredArticles.some((article) => article !== null))
       return filteredArticles
     else
-      return <div className='max-w-78 min-w-78 h-full text-lg opacity-80'>No matching articles found.</div>
+      return <div className='max-w-79 min-w-79 h-full text-lg opacity-80'>No matching articles found.</div>
   }
 
 
   return (
-    <div className='mt-12 flex-auto flex flex-col justify-start pb-15 px-5'>
+    <div className='flex-auto flex flex-col justify-start pb-15 px-5'>
       <div className="max-w-5xl mx-auto flex flex-col gap-10">
 
         {/* Page Header */}

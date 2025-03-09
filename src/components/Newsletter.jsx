@@ -1,16 +1,16 @@
 const Newsletter = () => {
   return (
     <div className="flex flex-col gap-3 justify-center h-full max-w-sm w-full">
-      <span className="team2:text-2xl text-xl font-semibold w-full text-center min-w-[270px]">
+      <span className="team2:text-2xl text-xl font-semibold w-full text-center min-w-[270px] text-stone-100">
         Subscribe to our newsletter!
       </span>
       <form
         action=""
-        className="transition-all duration-200 mt-2 border dark:border-indigo-700 border-indigo-50 rounded-md flex w-full hover:shadow-lg focus-within:shadow-lg min-w-[278px]"
+        className="transition-shadow duration-200 mt-2 border dark:border-indigo-700 border-indigo-50 rounded-md flex w-full hover:shadow-lg focus-within:shadow-lg min-w-[278px]"
       >
         <input
           id="email"
-          className="w-full py-2 px-3 outline-0 border-r dark:border-indigo-700 border-indigo-50"
+          className="w-full py-2 px-3 outline-0 border-r dark:border-indigo-700 border-indigo-50 text-stone-100"
           type="email"
           autoComplete="email"
           required
