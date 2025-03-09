@@ -62,16 +62,18 @@ const Articles = () => {
 
   return (
     <div className='flex-auto flex flex-col justify-start pb-15 px-5'>
-      <div className="max-w-5xl mx-auto flex flex-col gap-10">
+      <div className="max-w-5xl mx-auto flex flex-col">
 
         {/* Page Header */}
-        <span className='font-semibold text-6xl'>Articles</span>
+        <span className='font-semibold text-6xl mb-2 text-blue-500'>Inefan Insights</span>
+        {/* <span className='font-medium text-3xl mb-2'>Read posts from our editorial team</span> */}
+        <span className='font-medium text-3xl mb-10'>Explore insightful articles and thought-provoking content curated by our editorial team, covering a wide range of topics and perspectives.</span>
 
         {/* Filter */}
         <BlogFilter selected={selected} setSelected={setSelected} />
 
         {/* Container */}
-        <div ref={articleContainerRef} className='grid grid-cols-1 blogMedium:grid-cols-2 blogLarge:grid-cols-3 gap-10'>
+        <div ref={articleContainerRef} className='mt-10 grid grid-cols-1 blogMedium:grid-cols-2 blogLarge:grid-cols-3 gap-10'>
           {displayArticles()}
         </div>
       </div>
