@@ -44,7 +44,7 @@ function Navbar() {
 
           {/* 1.1 Light Logo */}
           <img
-            className="hover:drop-shadow-[0px_0px_20px_rgba(0,0,0,0.3)] transition-all duration-200 ease-in-out py-2 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden"
+            className="hover:drop-shadow-[0px_0px_20px_rgba(0,0,0,0.3)] transition-all duration-100 ease-in-out py-2 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden"
             src="/inefanLogo-light.png"
             alt="inefan logo"
             title="Homepage"
@@ -52,7 +52,7 @@ function Navbar() {
 
           {/* 1.2 Dark Logo */}
           <img
-            className="hover:drop-shadow-[0px_0px_10px_rgba(255,255,255,0.3)] transition-all duration-200 ease-in-out py-2 cursor-pointer team2:max-w-28 max-w-22 hidden dark:block"
+            className="hover:drop-shadow-[0px_0px_10px_rgba(255,255,255,0.3)] transition-all duration-100 ease-in-out py-2 cursor-pointer team2:max-w-28 max-w-22 hidden dark:block"
             src="/inefanLogo-dark.png"
             alt="inefan logo"
             title="Homepage"
@@ -73,13 +73,13 @@ function Navbar() {
           <img
             src="/menu-light.svg"
             ref={burgerIconLightRef}
-            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-50 hover:opacity-90 transition-all duration-200 block dark:hidden"
+            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-50 hover:opacity-90 transition-all duration-100 block dark:hidden"
             onClick={() => setShowBurgerMenu((prevState) => !prevState)}
           ></img>
           <img
             src="/menu-dark.svg"
             ref={burgerIconDarkRef}
-            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-70 hover:opacity-100 transition-all duration-200 hidden dark:block"
+            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-70 hover:opacity-100 transition-all duration-100 hidden dark:block"
             onClick={() => setShowBurgerMenu((prevState) => !prevState)}
           ></img>
         </div>
