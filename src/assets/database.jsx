@@ -2,8 +2,8 @@ export const reports = [
   {
     key: "13",
     short_title: "Report 13 (24-28 Feb)",
-    title: "Outlook Report 13",
-    subtitle: "February 24 - February 28, 2025",
+    title: "Weekly Outlook Report 13",
+    subtitle: "24-28 Feb, 2025",
     date: "2025-02-28",
     description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong>February 24, 2025 - February 28, 2025</strong>.<br><br>The content is distributed exclusively for informational purposes by the Inefan Economists' Association.<br><br>For additional details and insights, explore the full Weekly Outlook Report below:",
     pdf: "/report13.pdf"
@@ -11,8 +11,8 @@ export const reports = [
   {
     key: "12",
     short_title: "Report 12 (17-22 Feb)",
-    title: "Outlook Report 12",
-    subtitle: "February 17 - February 22, 2025",
+    title: "Weekly Outlook Report 12",
+    subtitle: "17-22 Feb, 2025",
     date: "2025-02-22",
     description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong>February 17, 2025 - February 22, 2025</strong>.<br><br>The content is distributed exclusively for informational purposes by the Inefan Economists' Association.<br><br>For additional details and insights, explore the full Weekly Outlook Report below:",
     pdf: "/report12.pdf"
@@ -20,8 +20,8 @@ export const reports = [
   {
     key: "11",
     short_title: "Report 11 (10-14 Feb)",
-    title: "Outlook Report 11",
-    subtitle: "February 10 - February 14, 2025",
+    title: "Weekly Outlook Report 11",
+    subtitle: "10-14 Feb, 2025",
     date: "2025-02-14",
     description: "The weekly report of the Financial Analysis team (Weekly Outlook Report) presents the stock market performance of various indices and markets for the week of <strong>February 10, 2025 - February 14, 2025</strong>.<br><br>The content is distributed exclusively for informational purposes by the Inefan Economists' Association.<br><br>For additional details and insights, explore the full Weekly Outlook Report below:",
     pdf: "/report11.pdf"

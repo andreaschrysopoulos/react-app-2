@@ -4,7 +4,7 @@ const About = () => {
       <div className="flex flex-col max-w-5xl gap-5">
 
         {/* What is Inefan */}
-        <div className="flex bg-stone-900 rounded-3xl w-full">
+        <div className="flex dark:bg-stone-900 bg-stone-200 rounded-3xl w-full">
 
           {/* Text */}
           <div className='flex flex-6 flex-col px-10 py-8 size-fit'>
@@ -21,7 +21,7 @@ const About = () => {
 
 
         {/* What we do */}
-        <div className="flex bg-stone-900 rounded-3xl w-full">
+        <div className="flex dark:bg-stone-900 bg-stone-200 rounded-3xl w-full">
 
           {/* Image */}
           {/* <div className="flex flex-5">

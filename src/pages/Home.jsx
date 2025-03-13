@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className="flex flex-auto justify-center px-5">
-      <div className="flex bg-stone-900 rounded-3xl max-w-5xl size-fit">
+      <div className="flex dark:bg-stone-900 bg-stone-200 rounded-3xl max-w-5xl size-fit">
 
         {/* Text */}
         <div className='flex flex-6 flex-col px-10 py-8 size-fit'>
