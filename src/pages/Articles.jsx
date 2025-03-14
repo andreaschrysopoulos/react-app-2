@@ -65,9 +65,8 @@ const Articles = () => {
       <div className="max-w-5xl mx-auto flex flex-col">
 
         {/* Page Header */}
-        <span className='font-semibold text-6xl mb-2 text-blue-500'>Inefan Insights</span>
-        {/* <span className='font-medium text-3xl mb-2'>Read posts from our editorial team</span> */}
-        <span className='font-medium text-3xl mb-10'>Explore insightful articles and thought-provoking content curated by our editorial team, covering a wide range of topics and perspectives.</span>
+        <span className='font-semibold text-6xl mb-2'>Inefan Insights</span>
+        <span className='text-3xl mb-10 dark:text-stone-400 text-stone-500'>Explore insightful articles and thought-provoking content curated by our editorial team, covering a wide range of topics and perspectives.</span>
 
         {/* Filter */}
         <BlogFilter selected={selected} setSelected={setSelected} />

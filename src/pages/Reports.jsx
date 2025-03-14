@@ -21,8 +21,8 @@ const Reports = () => {
       <div className="flex flex-col size-full max-w-5xl mx-auto">
 
         {/* Page Header */}
-        <span className='font-semibold text-6xl text-orange-400 mb-2'>Weekly Reports</span>
-        <span className='font-medium text-3xl mb-10'>The weekly reports of the Financial Analysis team presents the stock market performance of various indices and markets</span>
+        <span className='font-semibold text-6xl mb-2'>Weekly Reports</span>
+        <span className='text-3xl mb-10 dark:text-stone-400 text-stone-500'>The weekly reports of the Financial Analysis team presents the stock market performance of various indices and markets</span>
 
         {/* Blog Filter */}
         <BlogFilter selected={selected} setSelected={setSelected} />

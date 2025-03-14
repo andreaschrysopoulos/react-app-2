@@ -12,8 +12,8 @@ const Team = () => {
             Board of Directors
           </span> */}
 
-          <span className='font-semibold text-6xl mb-2 text-red-500'>Inefan Board</span>
-          <span className='font-medium text-3xl mb-10'>The Board of Directors at Inefan leads with diverse expertise in economics, finance, and entrepreneurship, guiding our mission to connect youth with education and career opportunities.</span>
+          <span className='font-semibold text-6xl mb-2'>Inefan Board</span>
+          <span className='font text-3xl mb-10 dark:text-stone-400 text-stone-500'>The Board of Directors at Inefan leads with diverse expertise in economics, finance, and entrepreneurship, guiding our mission to connect youth with education and career opportunities.</span>
 
           {/* Members */}
           <div className="grid gap-10 grid-cols-1 team2:grid-cols-2 team3:grid-cols-3 self-center">
