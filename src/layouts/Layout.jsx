@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Copyright from "../components/Copyright";
 import Widgets from "../components/Widgets";
-import { Analytics } from '@vercel/analytics/next';
 
 
 const Layout = () => {
@@ -12,7 +11,6 @@ const Layout = () => {
       <Outlet />
       <Widgets />
       <Copyright />
-      <Analytics />
     </>
   );
 };
