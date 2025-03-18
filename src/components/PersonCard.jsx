@@ -89,10 +89,10 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
 
           <div className="p-7 team3:p-10 w-fit flex flex-col items-center">
             <img className="w-50 rounded-full shadow-lg" src={img} alt="photo" />
-            <span className="team2:text-lg text-base font-medium dark:text-stone-300 text-stone-700 mt-7 text-center">{role}</span>
-            <span className="w-fit text-3xl team2:text-4xl team3:text-5xl font-semibold text-center mt-1">{name}</span>
-            <a href={linkedin} target="_blank" className="mt-4 team3:mt-6 ml-0.5 size-5 team2:size-6 opacity-90 hover:opacity-100 transition-opacity duration-200 hover:shadow-sm"><img className="" src="/linkedin-card.png" alt="linkedn-img" /></a>
-            <span className="mt-7 team3:mt-10 text-sm team2:text-base">{bio}</span>
+            <span className="text-lg font-medium dark:text-stone-300 text-stone-700 mt-7 text-center">{role}</span>
+            <span className="w-fit text-4xl team3:text-5xl font-semibold text-center mt-1">{name}</span>
+            <a href={linkedin} target="_blank" className="mt-4 team3:mt-6 ml-0.5 size-6 opacity-90 hover:opacity-100 transition-opacity duration-200 hover:shadow-sm"><img className="" src="/linkedin-card.png" alt="linkedn-img" /></a>
+            <span className="mt-7 team3:mt-10">{bio}</span>
           </div>
 
         </div>
