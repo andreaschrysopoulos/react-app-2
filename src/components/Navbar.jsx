@@ -37,14 +37,14 @@ function Navbar() {
     <nav className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5">
 
       {/* Container */}
-      <div className="py-1 flex max-w-5xl justify-between items-center w-full gap-5">
+      <div className="flex max-w-5xl justify-between items-center w-full gap-5">
 
         {/* 1. Logo */}
         <Link to="/" className="">
 
           {/* 1.1 Light Logo */}
           <img
-            className="py-2 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden opacity-80 hover:opacity-100"
+            className="py-3 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden opacity-80 hover:opacity-100"
             src="/inefanLogo-light-B.png"
             alt="inefan logo"
             title="Homepage"
@@ -52,7 +52,7 @@ function Navbar() {
 
           {/* 1.2 Dark Logo */}
           <img
-            className="py-2 cursor-pointer team2:max-w-28 max-w-22 hidden dark:block"
+            className="py-3 cursor-pointer team2:max-w-28 max-w-22 hidden dark:block"
             src="/inefanLogo-dark-W.png"
             alt="inefan logo"
             title="Homepage"
@@ -80,13 +80,13 @@ function Navbar() {
           <img
             src={showBurgerMenu ? "/close-burger-light.svg" : "/menu-light.svg"}
             ref={burgerIconLightRef}
-            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-50 hover:opacity-90 transition-all duration-100 block dark:hidden"
+            className="cursor-pointer size-10.5 pr-5 mr-[-20px] opacity-50 hover:opacity-90 transition-all duration-100 block dark:hidden"
             onClick={() => setShowBurgerMenu((prevState) => !prevState)}
           ></img>
           <img
             src={showBurgerMenu ? "/close-burger-dark.svg" : "/menu-dark.svg"}
             ref={burgerIconDarkRef}
-            className="cursor-pointer size-10 pr-5 mr-[-20px] opacity-70 hover:opacity-100 transition-all duration-100 hidden dark:block"
+            className="cursor-pointer size-10.5 pr-5 mr-[-20px] opacity-70 hover:opacity-100 transition-all duration-100 hidden dark:block"
             onClick={() => setShowBurgerMenu((prevState) => !prevState)}
           ></img>
         </div>
@@ -96,7 +96,7 @@ function Navbar() {
       {/* Mobile/Vertical Navigation Bar */}
       <div
         ref={burgerMenuRef}
-        className={`transition-all ease-in-out duration-500 flex-col w-full max-w-5xl text-xl ${
+        className={`transition-all ease-in-out duration-500 flex-col w-full max-w-5xl text-2xl ${
           showBurgerMenu 
             ? "flex py-3 max-h-100 pointer-events-auto" 
             : "max-h-0 py-0 pointer-events-none"
