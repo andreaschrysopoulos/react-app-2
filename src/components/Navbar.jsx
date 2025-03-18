@@ -5,19 +5,17 @@ import { useState, useEffect, useRef } from "react";
 function Navbar() {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
   const [currentPage, setCurrentPage] = useState(links);
-  const burgerIconLightRef = useRef(null); // Initialize with null
-  const burgerIconDarkRef = useRef(null); // Initialize with null
+  const burgerIconRef = useRef(null); // Initialize with null
+  // const burgerIconDarkRef = useRef(null); // Initialize with null
   const burgerMenuRef = useRef(null); // Initialize with null
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        (burgerIconLightRef.current && // Check if element is available
-          burgerIconDarkRef.current) && // Check if element is available
+        burgerIconRef.current && // Check if element is available
         burgerMenuRef.current && // Check if element is available
 
-        (!burgerIconLightRef.current.contains(e.target) &&
-          !burgerIconDarkRef.current.contains(e.target)) &&
+        !burgerIconRef.current.contains(e.target) &&
         !burgerMenuRef.current.contains(e.target)
       ) {
         setShowBurgerMenu(false);
@@ -76,18 +74,16 @@ function Navbar() {
         </div>
 
         {/* 3. Bars Icon */}
-        <div className="w-full team2:hidden flex justify-end items-center">
+        <div className="team2:hidden flex justify-end items-center"
+          onClick={() => setShowBurgerMenu((prevState) => !prevState)}
+          ref={burgerIconRef}>
           <img
             src={showBurgerMenu ? "/close-burger-light.svg" : "/menu-light.svg"}
-            ref={burgerIconLightRef}
-            className="cursor-pointer size-10.5 pr-5 mr-[-20px] opacity-50 hover:opacity-90 transition-all duration-100 block dark:hidden"
-            onClick={() => setShowBurgerMenu((prevState) => !prevState)}
+            className="cursor-pointer w-6 min-w-6 opacity-50 hover:opacity-90 block dark:hidden"
           ></img>
           <img
             src={showBurgerMenu ? "/close-burger-dark.svg" : "/menu-dark.svg"}
-            ref={burgerIconDarkRef}
-            className="cursor-pointer size-10.5 pr-5 mr-[-20px] opacity-70 hover:opacity-100 transition-all duration-100 hidden dark:block"
-            onClick={() => setShowBurgerMenu((prevState) => !prevState)}
+            className="cursor-pointer w-6 min-w-6 opacity-70 hover:opacity-100 hidden dark:block"
           ></img>
         </div>
 
@@ -96,11 +92,10 @@ function Navbar() {
       {/* Mobile/Vertical Navigation Bar */}
       <div
         ref={burgerMenuRef}
-        className={`transition-all ease-in-out duration-500 flex-col w-full max-w-5xl text-2xl ${
-          showBurgerMenu 
-            ? "flex py-3 max-h-100 pointer-events-auto" 
-            : "max-h-0 py-0 pointer-events-none"
-        }`}
+        className={`transition-all ease-in-out duration-500 flex-col w-full max-w-5xl text-2xl ${showBurgerMenu
+          ? "flex py-3 max-h-100 pointer-events-auto"
+          : "max-h-0 py-0 pointer-events-none"
+          }`}
       >
         {links.map((link) => (
           <NavLink

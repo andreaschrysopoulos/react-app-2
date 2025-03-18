@@ -2,10 +2,10 @@ import Breadcrums from "./Breadcrums";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center w-full dark:bg-stone-950 bg-stone-800 px-5 text-stone-100">
-      <div className="py-2.5 flex flex-wrap justify-between max-w-5xl w-full items-center text-sm gap-2">
+    <footer className="flex justify-center items-center w-full dark:bg-stone-950 bg-stone-800 px-5 text-stone-100">
+      <div className="py-2.5 flex flex-wrap justify-between max-w-5xl w-full items-center text-sm gap-x-5 gap-y-3">
         {/* <Breadcrums /> */}
-        <a className="hover:opacity-90 opacity-60 flex items-center justify-center" href="mailto:info@inefan.gr">info@inefan.gr
+        <a className="hover:opacity-90 opacity-60 flex items-center" href="mailto:info@inefan.gr">info@inefan.gr
 
           <svg className="ml-0.5" width="14" height="14" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
         </a>
@@ -20,7 +20,7 @@ const Footer = () => {
 
           {/* Facebook */}
           <a href="https://www.facebook.com/inefan.gr" target="_blank" rel="noopener noreferrer" className="transition-opacity duration-200 flex items-center justify-center opacity-50 hover:opacity-100 will-change-transform">
-            <img className="w-[17px] h-[17px]" src="/facebook.png" alt="Facebook" />
+            <img className="min-w-[17px] max-w-[17px] min-h-[17px] max-h-[17px]" src="/facebook.png" alt="Facebook" />
           </a>
 
           {/* Youtube */}
@@ -32,7 +32,7 @@ const Footer = () => {
 
           {/* LinkedIn */}
           <a href="https://www.linkedin.com/company/inefan" target="_blank" rel="noopener noreferrer" className="transition-opacity duration-200 flex itemeitems-center justify-center opacity-50 hover:opacity-100 will-change-transform">
-            <img className="w-[16.5px] h-[16.5px]" src="linkedin.png" alt="LinkedIn" />
+            <img className="min-w-[16.5px] max-w-[16.5px] min-h-[16.5px] max-h-[16.5px]" src="linkedin.png" alt="LinkedIn" />
           </a>
 
         </div>

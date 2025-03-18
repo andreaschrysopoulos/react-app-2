@@ -13,7 +13,7 @@ const BlogFilter = ({ selected, setSelected }) => {
   }
 
   return (
-    <div className='flex gap-2 overflow-x-auto items-center justify-between'>
+    <div className='flex gap-2 overflow-x-auto items-center justify-between pb-2'>
       <div className="flex items-center dark:bg-stone-900 bg-stone-200 py-1 px-1 rounded-full">
 
         <div className={`${isToggled('economics')} mr-1 px-3 py-1 rounded-full cursor-pointer transition-all duration-200`} onClick={() => toggleCategory("economics")}>Economics</div>
