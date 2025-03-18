@@ -1,4 +1,3 @@
-import Navlink from "./Navlink";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { links } from "../data/siteMap";
 import { useState, useEffect, useRef } from "react";
@@ -64,7 +63,9 @@ function Navbar() {
         <div className="hidden team2:flex w-fit justify-end items-center text-sm gap-5">
           {links.map((link) => (
             <NavLink key={link.key} className={({ isActive }) => isActive ? "opacity-100" : "opacity-50 hover:opacity-100"} to={link.to}>
-              <Navlink name={link.pageName} />
+              <span className='font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-1'>
+                {link.pageName}
+              </span>
             </NavLink>
           ))}
 
@@ -92,12 +93,14 @@ function Navbar() {
 
       </div>
 
-
-
       {/* Mobile/Vertical Navigation Bar */}
       <div
         ref={burgerMenuRef}
-        className={`transition-all flex-col w-full max-w-5xl py-3 text-xl ${showBurgerMenu ? "flex" : "hidden"}`}
+        className={`transition-all ease-in-out duration-500 flex-col w-full max-w-5xl text-xl ${
+          showBurgerMenu 
+            ? "flex py-3 max-h-100 pointer-events-auto" 
+            : "max-h-0 py-0 pointer-events-none"
+        }`}
       >
         {links.map((link) => (
           <NavLink
@@ -106,7 +109,9 @@ function Navbar() {
             to={link.to}
             onClick={() => setShowBurgerMenu(false)}
           >
-            <Navlink name={link.pageName} />
+            <span className={`transition-all duration-400 font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-1 ${showBurgerMenu ? 'opacity-100' : 'opacity-0'}`}>
+              {link.pageName}
+            </span>
           </NavLink>
         ))}
       </div>
