@@ -104,7 +104,7 @@ function Navbar() {
             to={link.to}
             onClick={() => setShowBurgerMenu(false)}
           >
-            <span className={`transition-all ease-in-out duration-400 font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-1 ${showBurgerMenu ? 'opacity-100' : 'opacity-0'}`}>
+            <span className={`transition-all ease-in-out duration-400 font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-2 ${showBurgerMenu ? 'opacity-100' : 'opacity-0'}`}>
               {link.pageName}
             </span>
           </NavLink>
