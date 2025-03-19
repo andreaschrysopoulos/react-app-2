@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Home = () => {
+
   return (
     <div className="flex flex-auto justify-center items-center team2:px-5 mb-5">
       <div className="grid team3:grid-cols-2 w-full gap-5">
