@@ -32,7 +32,7 @@ function Navbar() {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [showBurgerMenu]); // Empty dependency array means this runs only once after the initial render
+  }, []); // Empty dependency array means this runs only once after the initial render
 
   return (
     <nav id="nav" className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 translate-3d">
