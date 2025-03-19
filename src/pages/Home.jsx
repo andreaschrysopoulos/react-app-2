@@ -8,7 +8,7 @@ const Home = () => {
         {/* Item 1 */}
         <Link className="relative h-80 bg-stone-300 team2:hover:scale-[1.01] transition-transform duration-300 ease-in-out" to="/reports">
           <img className="object-cover size-full" src="/stock.jpg" alt="" />
-          <div className="absolute top-0 left-0 size-full p-10 flex flex-col gap-2 justify-center items-center transition-all duration-300 ease-in-out hover:backdrop-brightness-110 cursor-pointer text-white">
+          <div className="absolute top-0 left-0 size-full p-10 flex flex-col gap-2 justify-center items-center transition-all duration-300 ease-in-out hover:backdrop-brightness-110 cursor-pointer text-white backdrop-blur-xs">
             <span className="team2:text-5xl text-4xl text-center font-semibold">Weekly Financial Reports</span>
             <span className="team2:text-2xl text-xl text-center">Up-to-date stock market performance.</span>
           </div>
