@@ -72,7 +72,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
         {/* Photo */}
         <div className="h-75 overflow-hidden rounded-tl-4xl rounded-tr-4xl">
           <img
-            className="size-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.03]"
+            className="will-change-transform size-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.03]"
             src={img}
             alt="photo"
           />
@@ -92,7 +92,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
       <div ref={popup} className={`backdrop-blur-lg transition-opacity ease-in-out duration-300 flex overflow-x-auto team2:p-5 team3:pt-20 team2:pt-10 fixed h-dvh w-dvw bg-white/5 dark:bg-black/5 top-0 left-0 z-50 ${popupState ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
 
         {/* Container */}
-        <div className={`overflow-y-auto duration-300 relative flex flex-col team2:h-max h-full min-w-70 team3:w-180 team2:w-150 w-full bg-white dark:bg-stone-800 p-0 team3:p-6 py-6 team2:mx-auto team2:rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)] ${popupState ? "" : "team2:translate-y-5 scale-[0.95]"}`}>
+        <div className={`will-change-auto overflow-y-auto duration-300 relative flex flex-col team2:h-max h-full min-w-70 team3:w-180 team2:w-150 w-full bg-white dark:bg-stone-800 p-0 team3:p-6 py-6 team2:mx-auto team2:rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)] ${popupState ? "" : "team2:translate-y-7 scale-[0.95]"}`}>
 
           {/* Close button */}
           <img ref={popupCloseBtnLight} src="/close-light.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-50 transition-all duration-200 self-end block dark:hidden"></img>
