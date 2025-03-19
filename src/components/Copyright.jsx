@@ -32,7 +32,7 @@ const Footer = () => {
 
           {/* LinkedIn */}
           <a href="https://www.linkedin.com/company/inefan" target="_blank" rel="noopener noreferrer" className="transition-opacity duration-200 flex itemeitems-center justify-center opacity-50 hover:opacity-100 will-change-transform">
-            <img className="min-w-[16.5px] max-w-[16.5px] min-h-[16.5px] max-h-[16.5px]" src="linkedin.png" alt="LinkedIn" />
+            <img className="min-w-[16.5px] max-w-[16.5px] min-h-[16.5px] max-h-[16.5px]" src="/linkedin.png" alt="LinkedIn" />
           </a>
 
         </div>

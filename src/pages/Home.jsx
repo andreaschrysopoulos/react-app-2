@@ -16,7 +16,7 @@ const Home = () => {
         </Link>
 
         {/* Item 2 */}
-        <Link className="relative h-80 bg-stone-400 team2:hover:scale-[1.01] transition-transform duration-300 ease-in-out will-change-transform" to="/articles">
+        <Link className="relative h-80 bg-stone-400 team2:hover:scale-[1.01] transition-transform duration-300 ease-in-out will-change-transform" to="/insights">
           <img className="object-cover size-full" src="/insights.jpg" alt="" />
           <div className="absolute top-0 left-0 size-full p-10 flex flex-col gap-2 justify-center items-center transition-all duration-300 ease-in-out hover:backdrop-brightness-110 cursor-pointer text-white backdrop-blur-xs">
             <span className="team2:text-5xl text-4xl text-center font-semibold">Insights</span>

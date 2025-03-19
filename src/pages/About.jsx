@@ -1,4 +1,4 @@
-import Articles from "./Articles"
+import Articles from "./Insights"
 
 const About = () => {
   return (

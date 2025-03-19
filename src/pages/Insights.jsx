@@ -4,7 +4,7 @@ import BlogFilter from '../components/BlogFilter'
 import { useState, useRef, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-const Articles = () => {
+const Insights = () => {
 
   const [searchParams, setSearchParams] = useSearchParams()
 
@@ -33,6 +33,7 @@ const Articles = () => {
           title={article.title}
           picture={article.picture}
           date={article.date}
+          slug={article.slug}
         />)
     }
 
@@ -45,6 +46,7 @@ const Articles = () => {
           title={article.title}
           picture={article.picture}
           date={article.date}
+          slug={article.slug}
         />
       }
       else
@@ -81,4 +83,4 @@ const Articles = () => {
   )
 }
 
-export default Articles
+export default Insights
