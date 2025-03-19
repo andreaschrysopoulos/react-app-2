@@ -1,6 +1,6 @@
 const Article = ({ category, title, date, picture }) => {
   return (
-    <a href="" className='cursor-pointer max-w-70 min-w-70 h-full'>
+    <a href="" className='cursor-pointer max-w-78 min-w-70 h-full'>
 
       {/* Container */}
       <div className='group flex flex-col h-full rounded-4xl bg-white dark:bg-stone-900'>
