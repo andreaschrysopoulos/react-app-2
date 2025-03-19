@@ -2,9 +2,10 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { links } from "../data/siteMap";
 import { useState, useEffect, useRef } from "react";
 
+
 function Navbar() {
+
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
-  const [currentPage, setCurrentPage] = useState(links);
   const burgerIconRef = useRef(null); // Initialize with null
   // const burgerIconDarkRef = useRef(null); // Initialize with null
   const burgerMenuRef = useRef(null); // Initialize with null
@@ -32,7 +33,7 @@ function Navbar() {
   }, []); // Empty dependency array means this runs only once after the initial render
 
   return (
-    <nav className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5">
+    <nav id="nav" className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5">
 
       {/* Container */}
       <div className="flex max-w-5xl justify-between items-center w-full gap-5">

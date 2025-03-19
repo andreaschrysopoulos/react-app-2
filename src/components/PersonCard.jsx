@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useCallback } from "react"
 
 const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
 
+
+
   const [popupState, setPopupState] = useState(false);
   const card = useRef(null);
   const popup = useRef(null);
@@ -11,11 +13,14 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
   const scrollPosition = useRef(0);
 
   const openPopup = useCallback(() => {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     scrollPosition.current = window.scrollY;
     document.body.style.position = 'fixed';
     document.body.style.width = '100%';
     document.body.style.overflowY = 'auto';
     document.body.style.top = `-${scrollPosition.current}px`;
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    document.getElementById('nav').style.paddingRight = `${scrollbarWidth + 20}px`;
     setPopupState(true)
   }, []);
 
@@ -24,7 +29,9 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
     document.body.style.width = '';
     document.body.style.top = '';
     document.body.style.overflowY = 'scroll';
+    document.body.style.paddingRight = '';
     window.scrollTo(0, scrollPosition.current);
+    document.getElementById('nav').style.paddingRight = '';
 
     setPopupState(false)
   }, []);
@@ -58,6 +65,8 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
 
   return (
     <>
+
+      {/* Main Container */}
       <div ref={card} className="group cursor-pointer flex flex-col h-full max-w-78 min-w-70 rounded-4xl bg-white dark:bg-stone-900">
 
         {/* Photo */}
@@ -80,21 +89,34 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
       </div>
 
       {/* Popup */}
-      <div ref={popup} className={`overflow-x-auto p-5 team3:pt-20 pt-10 fixed h-dvh w-dvw bg-white/5 dark:bg-black/5 top-0 left-0 z-50 backdrop-blur-lg ${popupState ? 'flex' : 'hidden'}`}>
+      <div ref={popup} className={`backdrop-blur-lg transition-opacity ease-in-out duration-300 flex overflow-x-auto team2:p-5 team3:pt-20 team2:pt-10 fixed h-dvh w-dvw bg-white/5 dark:bg-black/5 top-0 left-0 z-50 ${popupState ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
 
-        <div className="relative flex flex-col h-max team3:w-180 team2:w-150 w-115 bg-white dark:bg-stone-800 p-0 team3:p-6 py-6 mx-auto rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)]">
+        {/* Container */}
+        <div className="overflow-y-auto duration-300 relative flex flex-col team2:h-max h-full min-w-70 team3:w-180 team2:w-150 w-full bg-white dark:bg-stone-800 p-0 team3:p-6 py-6 team2:mx-auto team2:rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)]">
 
+          {/* Close button */}
           <img ref={popupCloseBtnLight} src="/close-light.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-50 transition-all duration-200 self-end block dark:hidden"></img>
           <img ref={popupCloseBtnDark} src="/close-dark.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-60 transition-all duration-200 self-end hidden dark:block"></img>
 
+          {/* Card Content */}
           <div className="p-7 team3:p-10 w-fit flex flex-col items-center">
-            <img className="w-50 rounded-full shadow-lg" src={img} alt="photo" />
-            <span className="text-lg font-medium dark:text-stone-300 text-stone-700 mt-7 text-center">{role}</span>
-            <span className="w-fit text-4xl team3:text-5xl font-semibold text-center mt-1">{name}</span>
-            <a href={linkedin} target="_blank" className="mt-4 team3:mt-6 ml-0.5 size-6 opacity-90 hover:opacity-100 transition-opacity duration-200 hover:shadow-sm"><img className="" src="/linkedin-card.png" alt="linkedn-img" /></a>
-            <span className="mt-7 team3:mt-10">{bio}</span>
-          </div>
 
+            {/* Photo */}
+            <img className="w-50 rounded-full shadow-lg" src={img} alt="photo" />
+
+            {/* Role */}
+            <span className="text-lg font-medium dark:text-stone-300 text-stone-700 mt-7 text-center">{role}</span>
+
+            {/* Full Name */}
+            <span className="w-fit text-4xl team3:text-5xl font-semibold text-center mt-1">{name}</span>
+
+            {/* LinkedIn */}
+            <a href={linkedin} target="_blank" className="mt-4 team3:mt-6 ml-0.5 size-6 opacity-90 hover:opacity-100 transition-opacity duration-200 hover:shadow-sm"><img className="" src="/linkedin-card.png" alt="linkedn-img" /></a>
+
+            {/* Bio */}
+            <span className="mt-7 team3:mt-10">{bio}</span>
+
+          </div>
         </div>
       </div>
     </>
