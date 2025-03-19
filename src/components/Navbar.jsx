@@ -33,7 +33,7 @@ function Navbar() {
   }, []); // Empty dependency array means this runs only once after the initial render
 
   return (
-    <nav id="nav" className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5">
+    <nav id="nav" className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 translate-3d">
 
       {/* Container */}
       <div className="flex max-w-5xl justify-between items-center w-full gap-5">
@@ -68,7 +68,7 @@ function Navbar() {
             </NavLink>
           ))}
 
-          {/* Become member */}
+          {/* Button Membership */}
           <div className="bg-blue-400 dark:bg-blue-700 hover:bg-blue-500 dark:hover:bg-blue-600 rounded-full py-1 px-3 text-white font-medium cursor-pointer ease-in-out transition-all duration-200 hover:scale-[1.03] will-change-transform">
             Membership
           </div>
