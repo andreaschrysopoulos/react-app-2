@@ -39,7 +39,7 @@ const Reports = () => {
           <BlogFilter selected={selected} setSelected={setSelected} />
         </div>
 
-        {/* Table of Reports */}
+        {/* Table Layout */}
         <table className={`mt-5 dark:bg-stone-900 bg-stone-200 rounded-2xl overflow-hidden hidden team2:table team3:text-base text-sm transition-opacity duration-400 ${isLoaded ? "" : "opacity-0"}`}>
 
           {/* Table Head */}
@@ -73,7 +73,8 @@ const Reports = () => {
 
         </table>
 
-        <div className="mt-5 flex flex-col gap-5 team2:hidden">
+        {/* Cards Layout */}
+        <div className={`mt-5 flex flex-col gap-5 team2:hidden transition-opacity duration-400 ${isLoaded ? "" : "opacity-0"}`}>
           {
             reports.map(report => (
               <a href={report.pdf} className="transition-all duration-200 ease-in-out rounded-3xl
