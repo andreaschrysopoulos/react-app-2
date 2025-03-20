@@ -30,14 +30,23 @@ const SingleInsight = () => {
 
               {/* Page Header */}
               <div className="flex flex-col max-w-2xl mx-auto mt-10">
+
+                {/* Category */}
                 <span className='font-medium text-sm mb-1 dark:text-stone-400 text-stone-600'>{article.category.toUpperCase()}</span>
+
+                {/* Date */}
                 <span className='font-medium text-sm mb-6 dark:text-stone-400 text-stone-600'>{article.date}</span>
+
+                {/* Title */}
                 <span className='font-bold team3:text-5xl text-4xl mb-6'>{article.title}</span>
+
+                {/* Subtitle */}
                 <span className='team3:text-2xl text-xl mb-14'>{article.subtitle}</span>
+
               </div>
 
               {/* Photo */}
-              <div className="w-full h-100 overflow-hidden rounded-xl mb-5">
+              <div className="w-full team2:h-100 h-70 overflow-hidden rounded-xl mb-5">
                 <img src={article.picture} alt="" className='object-cover size-full' />
               </div>
 

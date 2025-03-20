@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Home = () => {
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
+
   return (
     <div className="flex flex-auto justify-center items-center team2:px-5 mb-5">
-      <div className="grid team3:grid-cols-2 w-full gap-5">
+      <div className={`opacity-0 grid team3:grid-cols-2 w-full gap-5 transition-opacity duration-400 ${isLoaded && "opacity-100"}`}>
 
         {/* Item 1 */}
         <Link className="relative h-80 bg-stone-300 team2:hover:scale-[1.01] transition-transform duration-300 ease-in-out will-change-transform" to="/reports">

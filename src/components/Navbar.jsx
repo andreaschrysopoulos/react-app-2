@@ -71,7 +71,7 @@ function Navbar() {
           ))}
 
           {/* Button Membership */}
-          <div className="bg-blue-400 dark:bg-blue-700 hover:bg-blue-500 dark:hover:bg-blue-600 rounded-full py-1 px-3 text-white font-medium cursor-pointer ease-in-out transition-all duration-200 hover:scale-[1.03] will-change-transform">
+          <div className="bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-600 rounded-full py-1 px-3 text-white font-medium cursor-pointer ease-in-out transition-all duration-200 hover:scale-[1.03] will-change-transform">
             Membership
           </div>
         </div>

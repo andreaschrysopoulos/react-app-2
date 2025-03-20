@@ -124,7 +124,7 @@ export const articles = [
     category: "international",
     title: "The Economic Consequences of the War in Ukraine",
     subtitle: "The war in Ukraine has triggered global economic instability, supply chain disruptions, energy crises, inflation, food shortages, market volatility, recession risks, and geopolitical tensions.",
-    content: "",
+    content: "On Thursday, February 24, 2022, Russia invaded Ukraine, disrupting global balances and forever changing the world. This armed conflict, beyond its humanitarian and geopolitical dimensions, has also had a tremendous economic impact, affecting not only the directly involved parties—Russia and Ukraine—but also the global economy, and more specifically the European Union and its member states. The fact that Russia is an energy giant while Ukraine is one of the world's largest exporters of agricultural products only exacerbates the situation, creating a chain of intractable problems. How has the war affected the Ukrainian economy? Ukraine has historically been one of the poorest regions of the Soviet Union. However, after gaining independence in 1991, its economy developed significantly. This progress was abruptly halted by the war, which has shaken the Ukrainian state to its core. Notably, in just the first year of the conflict, the country lost 30-35% of its GDP, marking the deepest recession in its brief history.",
     date: "May 29, 2024",
     picture: "/blog-5.jpg",
     key: "a5",
