@@ -7,6 +7,12 @@ import BlogFilter from '../components/BlogFilter'
 
 const Reports = () => {
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   const [selected, setSelected] = useState([]);
   // const [searchParams, setSearchParams] = useSearchParams({ id: reports[0].key })
   // const [highlight, setHighlight] = useState(reports.some(report => report.key === searchParams.get('id')) ? searchParams.get('id') : reports[0].key);
@@ -20,15 +26,21 @@ const Reports = () => {
     <div className="flex flex-col flex-auto px-5 pb-10">
       <div className="flex flex-col size-full max-w-5xl mx-auto">
 
-        {/* Page Header */}
-        <span className='font-semibold team3:text-6xl text-5xl mb-2'>Weekly Reports</span>
-        <span className='team3:text-3xl text-2xl mb-10 dark:text-stone-400 text-stone-500'>The weekly reports of the Financial Analysis team presents the stock market performance of various indices and markets</span>
+        {/* Transition Div */}
+        <div className={`flex flex-col transition-all duration-400 ${isLoaded ? "opacity-100" : "translate-y-4 opacity-0"}`}>
+          {/* Page Header */}
+          <span className='font-semibold team3:text-6xl text-5xl mb-2'>Weekly Reports</span>
+          <span className='team3:text-3xl text-2xl mb-10 dark:text-stone-400 text-stone-500'>The weekly reports of the Financial Analysis team presents the stock market performance of various indices and markets</span>
+
+        </div>
 
         {/* Blog Filter */}
-        <BlogFilter selected={selected} setSelected={setSelected} />
+        <div className={`transition-opacity duration-400 ${isLoaded ? "" : "opacity-0"}`}>
+          <BlogFilter selected={selected} setSelected={setSelected} />
+        </div>
 
         {/* Table of Reports */}
-        <table className="mt-5 dark:bg-stone-900 bg-stone-200 rounded-2xl overflow-hidden hidden team2:table team3:text-base text-sm">
+        <table className={`mt-5 dark:bg-stone-900 bg-stone-200 rounded-2xl overflow-hidden hidden team2:table team3:text-base text-sm transition-opacity duration-400 ${isLoaded ? "" : "opacity-0"}`}>
 
           {/* Table Head */}
           <thead>

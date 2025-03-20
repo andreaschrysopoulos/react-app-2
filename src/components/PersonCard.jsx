@@ -67,7 +67,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
     <>
 
       {/* Main Container */}
-      <div ref={card} className="group cursor-pointer flex flex-col h-full max-w-78 min-w-70 rounded-4xl bg-white dark:bg-stone-900">
+      <div ref={card} className="group cursor-pointer flex flex-col h-full max-w-79 min-w-70 rounded-4xl bg-white dark:bg-stone-900">
 
         {/* Photo */}
         <div className="h-75 overflow-hidden rounded-tl-4xl rounded-tr-4xl">

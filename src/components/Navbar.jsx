@@ -11,9 +11,12 @@ function Navbar() {
   const burgerMenuRef = useRef(null); // Initialize with null
 
   useEffect(() => {
-    if (!showBurgerMenu) return
 
     const handleClickOutside = (e) => {
+
+      if (!showBurgerMenu)
+        return   
+
       if (
         burgerIconRef.current && // Check if element is available
         burgerMenuRef.current && // Check if element is available
@@ -21,6 +24,7 @@ function Navbar() {
         !burgerIconRef.current.contains(e.target) &&
         !burgerMenuRef.current.contains(e.target)
       ) {
+        // burgerIconRef.current.classList.add("hidden")
         setShowBurgerMenu(false);
       }
     };
@@ -32,10 +36,10 @@ function Navbar() {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []); // Empty dependency array means this runs only once after the initial render
+  }, [showBurgerMenu]);
 
   return (
-    <nav id="nav" className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 translate-3d">
+    <nav id="nav" className="bg-stone-50/80 backdrop-blur-xl saturate-180 dark:bg-stone-900/80 fixed z-10 top-0 left-0 flex flex-col items-center w-full border-b dark:border-b-stone-800 border-b-stone-200 px-5 translate-3d ">
 
       {/* Container */}
       <div className="flex max-w-5xl justify-between items-center w-full gap-5">
@@ -61,7 +65,7 @@ function Navbar() {
         </Link>
 
         {/* 2. Horizontal Navigation Bar  */}
-        <div className="hidden team2:flex w-fit justify-end items-center text-sm gap-5">
+        <div className={`hidden team2:flex w-fit justify-end items-center text-sm gap-5 ${showBurgerMenu && "hidden!"}`}>
           {links.map((link) => (
             <NavLink key={link.key} className={({ isActive }) => isActive ? "opacity-100" : "opacity-50 hover:opacity-100"} to={link.to}>
               <span className='font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-1'>
@@ -77,7 +81,7 @@ function Navbar() {
         </div>
 
         {/* 3. Bars Icon */}
-        <div className="team2:hidden flex justify-end items-center"
+        <div className={`team2:hidden flex justify-end items-center ${showBurgerMenu && "flex!"}`}
           onClick={() => setShowBurgerMenu((prevState) => !prevState)}
           ref={burgerIconRef}>
           <img
@@ -107,7 +111,7 @@ function Navbar() {
             to={link.to}
             onClick={() => setShowBurgerMenu(false)}
           >
-            <span className={`transition-all ease-in-out duration-400 font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-2 ${showBurgerMenu ? 'opacity-100' : 'opacity-0'}`}>
+            <span className={`font-stretch-103% flex text-black dark:text-white w-max text-end cursor-pointer py-2 ${showBurgerMenu ? 'transition-all ease-in-out duration-600 opacity-100' : "opacity-0 transition-all ease-in-out duration-300"}`}>
               {link.pageName}
             </span>
           </NavLink>

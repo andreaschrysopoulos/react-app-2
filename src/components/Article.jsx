@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Article = ({ category, title, date, picture, slug }) => {
   return (
-    <Link to={'/insights/' + slug} className='cursor-pointer max-w-78 min-w-70 h-full'>
+    <Link to={'/insights/' + slug} className='cursor-pointer max-w-79 min-w-70 h-full'>
 
       {/* Container */}
       <div className='group flex flex-col h-full rounded-4xl bg-white dark:bg-stone-900'>
