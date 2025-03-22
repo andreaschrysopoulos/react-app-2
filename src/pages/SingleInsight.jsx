@@ -1,8 +1,7 @@
-import React from 'react'
 import { useParams } from 'react-router-dom';
 import { articles } from '../assets/database';
 import NotFound from './404';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const SingleInsight = () => {
   const { slug } = useParams();

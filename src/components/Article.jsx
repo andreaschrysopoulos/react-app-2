@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 
 const Article = ({ category, title, date, picture, slug }) => {
   return (
@@ -24,6 +25,13 @@ const Article = ({ category, title, date, picture, slug }) => {
 
     </Link>
   )
+}
+Article.propTypes = {
+  category: PropTypes.string,
+  title: PropTypes.string,
+  date: PropTypes.string,
+  picture: PropTypes.string,
+  slug: PropTypes.string
 }
 
 export default Article

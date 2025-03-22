@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
 const BlogFilter = ({ selected, setSelected }) => {
 
@@ -28,6 +28,11 @@ const BlogFilter = ({ selected, setSelected }) => {
     </div>
 
   )
+}
+
+BlogFilter.propTypes = {
+  selected: PropTypes.array.isRequired,
+  setSelected: PropTypes.func.isRequired,
 }
 
 export default BlogFilter

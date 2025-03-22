@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react"
+import PropTypes from "prop-types"
 
 const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
-
-
-
+  
   const [popupState, setPopupState] = useState(false);
   const card = useRef(null);
   const popup = useRef(null);
@@ -60,7 +59,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
       popupCloseDarkElement.removeEventListener("click", handleClosePopup);
     };
 
-  }, [])
+  })
 
 
   return (
@@ -121,6 +120,14 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
       </div>
     </>
   );
+};
+
+CardTeamMember.propTypes = {
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string,
+  bio: PropTypes.string,
+  img: PropTypes.string,
+  linkedin: PropTypes.string,
 };
 
 export default CardTeamMember;

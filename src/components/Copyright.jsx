@@ -1,4 +1,4 @@
-import Breadcrums from "./Breadcrums";
+// import Breadcrums from "./Breadcrums";
 
 const Footer = () => {
   return (
