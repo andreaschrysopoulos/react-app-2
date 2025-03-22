@@ -1,5 +1,3 @@
-import Articles from "./Insights"
-
 const About = () => {
   return (
     <div className='flex flex-auto flex-col items-center justify-center px-5 pb-8 mb-20'>

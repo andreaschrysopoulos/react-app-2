@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { links } from "../data/siteMap";
 import { useState, useEffect, useRef } from "react";
 
@@ -15,7 +15,7 @@ function Navbar() {
     const handleClickOutside = (e) => {
 
       if (!showBurgerMenu)
-        return   
+        return
 
       if (
         burgerIconRef.current && // Check if element is available
