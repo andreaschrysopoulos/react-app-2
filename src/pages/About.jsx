@@ -4,10 +4,10 @@ const About = () => {
       <div className="flex flex-col max-w-5xl mx-auto">
 
         {/* Title */}
-        <span className='font-semibold team3:text-7xl text-6xl mb-6 mt-20 text-center'>Independent Economic & Financial Analysis</span>
+        <span className='font-semibold team3:text-6xl text-5xl mb-6 mt-20 text-center'>Independent Economic & Financial Analysis</span>
 
         {/* Subtitle */}
-        <span className='text-2xl mb-30 dark:text-stone-400 text-stone-500 max-w-3xl self-center text-center'>
+        <span className='team3:text-3xl text-2xl mb-30 dark:text-stone-400 text-stone-500 max-w-3xl self-center text-center'>
           <div className="">Inefan (Independent Economic & Financial Analysis) is a non-profit association founded by a group of students and graduates from the Department of Economics at Aristotle University of Thessaloniki.</div>
           {/* <div className="mt-10">Since then, our association has evolved, incorporating a significant number of students and interested individuals while expanding its activities into various sectors that characterize the labor market.</div> */}
         </span>
