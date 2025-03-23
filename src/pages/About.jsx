@@ -3,32 +3,35 @@ const About = () => {
     <div className='flex flex-auto flex-col items-center justify-center px-5 pb-8 mb-20'>
       <div className="flex flex-col max-w-5xl mx-auto">
 
-        {/* Main Title */}
-        <span className='font-semibold text-7xl mb-6 mt-20 text-center'>Independent Economic & Financial Analysis</span>
+        {/* Title */}
+        <span className='font-semibold team3:text-7xl team2:text-6xl text-5xl mb-6 mt-20 text-center'>Independent Economic & Financial Analysis</span>
 
         {/* Subtitle */}
-        <span className='text-2xl mb-30 dark:text-stone-400 text-stone-500 max-w-3xl self-center text-center'>
+        <span className='team2:text-2xl text-xl mb-30 dark:text-stone-400 text-stone-500 max-w-3xl self-center text-center'>
           <div className="">Inefan (Independent Economic & Financial Analysis) is a non-profit association founded by a group of students and graduates from the Department of Economics at Aristotle University of Thessaloniki.</div>
           {/* <div className="mt-10">Since then, our association has evolved, incorporating a significant number of students and interested individuals while expanding its activities into various sectors that characterize the labor market.</div> */}
         </span>
 
-        <span className="text-6xl font-semibold text-center mb-10 bg-gradient-to-r from-0% from-blue-600 to-100% to-violet-600 bg-clip-text text-transparent">Milestones since 2018</span>
-        <div className="flex justify-center mb-5 gap-15 text-center">
+        {/* Heading */}
+        <span className="team3:text-6xl team2:text-5xl text-4xl font-semibold text-center mb-10 bg-gradient-to-r from-0% from-blue-600 to-100% to-violet-600 bg-clip-text text-transparent">Milestones since 2018</span>
+
+        {/* Numbers */}
+        <div className="flex flex-wrap justify-center mb-5 gap-15 text-center">
           <div>
-            <div className="text-5xl font-medium">110</div>
-            <div className="text-2xl dark:text-stone-400">Editors</div>
+            <div className="team2:text-5xl text-4xl font-semibold">110</div>
+            <div className="team2:text-2xl text-xl dark:text-stone-400">Editors</div>
           </div>
           <div>
-            <div className="text-5xl font-medium">280</div>
-            <div className="text-2xl dark:text-stone-400">Published Articles</div>
+            <div className="team2:text-5xl text-4xl font-semibold">280</div>
+            <div className="team2:text-2xl text-xl dark:text-stone-400">Published Articles</div>
           </div>
           <div>
-            <div className="text-5xl font-medium">38</div>
-            <div className="text-2xl dark:text-stone-400">Events</div>
+            <div className="team2:text-5xl text-4xl font-semibold">38</div>
+            <div className="team2:text-2xl text-xl dark:text-stone-400">Events</div>
           </div>
           <div>
-            <div className="text-5xl font-medium">8.000+</div>
-            <div className="text-2xl dark:text-stone-400">Participants</div>
+            <div className="team2:text-5xl text-4xl font-semibold">8.000+</div>
+            <div className="team2:text-2xl text-xl dark:text-stone-400">Participants</div>
           </div>
 
         </div>

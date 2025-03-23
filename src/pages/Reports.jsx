@@ -1,12 +1,21 @@
 import { reports } from "../assets/database";
 import { useState, useEffect } from "react";
 import BlogFilter from "../components/BlogFilter";
+// import { neon } from "@neondatabase/serverless";
+
+// const getData = async () => {
+//   const sql = neon(process.env.DATABASE_URL);
+//   const posts = await sql("SELECT * FROM reports WHERE id = 1");
+//   return posts;
+// };
 
 const Reports = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+
+    // console.log(getData());
   }, []);
 
   const [selected, setSelected] = useState([]);
@@ -14,6 +23,7 @@ const Reports = () => {
   return (
     <div className="flex flex-col flex-auto px-5 pb-10">
       <div className="flex flex-col size-full max-w-5xl mx-auto">
+
         {/* Transition Div */}
         <div
           className={`flex flex-col transition-all duration-400 ${isLoaded ? "opacity-100" : "translate-y-4 opacity-0"}`}

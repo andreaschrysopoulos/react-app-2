@@ -13,9 +13,7 @@ const SingleInsight = () => {
       article = art;
       return;
     }
-  }
-  )
-
+  });
 
   return (
     <>
