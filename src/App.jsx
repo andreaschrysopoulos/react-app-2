@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import Home from "./pages/Home";
 import Insights from "./pages/Insights";
-import SingleInsight from "./pages/SingleInsight";
+import SingleInsight from "./pages/InsightPage";
 import Events from "./pages/Events";
 import Reports from "./pages/Reports";
 import Contact from "./pages/Contact";
@@ -33,8 +33,8 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/insights" element={<Insights />} />
           <Route path="/insights/:slug" element={<SingleInsight />} />
+          <Route path="/insights" element={<Insights />} />
           <Route path="/events" element={<Events />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/contact" element={<Contact />} />

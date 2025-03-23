@@ -1,4 +1,4 @@
-import Article from '../components/Article'
+import InsightCard from '../components/InsightCard'
 import { articles } from '../assets/database'
 import BlogFilter from '../components/BlogFilter'
 import { useState, useRef, useEffect } from 'react'
@@ -23,7 +23,7 @@ const Insights = () => {
     if (selected.length > 0) {
       setSearchParams({ category: selected }, { replace: true })
     } else {
-      setSearchParams({}, { relative: true })
+      setSearchParams({}, { replace: true })
     }
   }, [selected, setSearchParams])
 
@@ -33,7 +33,7 @@ const Insights = () => {
     // If no filter is active, display all articles
     if (!selected.length) {
       return articles.map(article =>
-        <Article
+        <InsightCard
           key={article.key}
           category={article.category.toUpperCase()}
           title={article.title}
@@ -46,7 +46,7 @@ const Insights = () => {
     // If filter is active, put matching articles in variable
     const filteredArticles = articles.map(article => {
       if (selected.includes(article.category)) {
-        return <Article
+        return <InsightCard
           key={article.key}
           category={article.category.toUpperCase()}
           title={article.title}
