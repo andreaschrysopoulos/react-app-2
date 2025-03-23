@@ -5,7 +5,7 @@ export const reports = [
     title: "Weekly Outlook Report 13",
     subtitle: "24-28 Feb, 2025",
     date: "2025-02-28",
-    pdf: "/report13.pdf"
+    pdf: "/reports/report13.pdf"
   },
   {
     key: "12",
@@ -13,7 +13,7 @@ export const reports = [
     title: "Weekly Outlook Report 12",
     subtitle: "17-22 Feb, 2025",
     date: "2025-02-22",
-    pdf: "/report12.pdf"
+    pdf: "/reports/report12.pdf"
   },
   {
     key: "11",
@@ -21,7 +21,7 @@ export const reports = [
     title: "Weekly Outlook Report 11",
     subtitle: "10-14 Feb, 2025",
     date: "2025-02-14",
-    pdf: "/report11.pdf"
+    pdf: "/reports/report11.pdf"
   },
 ]
 
