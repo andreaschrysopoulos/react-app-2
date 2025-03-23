@@ -10,7 +10,7 @@ const Article = ({ category, title, date, picture, slug }) => {
 
         {/* 1. Photo */}
         <div className="h-43 min-h-43 overflow-hidden rounded-tl-4xl rounded-tr-4xl">
-          <img className='size-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.03] will-change-transform' src={picture} />
+          <img className='size-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.03] group-active:scale-[1.03] will-change-transform' src={picture} />
         </div>
 
 

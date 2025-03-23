@@ -43,7 +43,7 @@ function Navbar() {
         <Link to="/" className="">
           {/* 1.1 Light Logo */}
           <img
-            className="py-3 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden opacity-80 hover:opacity-100"
+            className="py-3 cursor-pointer team2:max-w-28 max-w-22 block dark:hidden opacity-80 hover:opacity-100 active:opacity-100"
             src="/inefanLogo-light-B.png"
             alt="inefan logo"
             title="Homepage"
@@ -66,7 +66,7 @@ function Navbar() {
             <NavLink
               key={link.key}
               className={({ isActive }) =>
-                isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
+                isActive ? "opacity-100" : "opacity-50 hover:opacity-100 active:opacity-100"
               }
               to={link.to}
             >
@@ -77,7 +77,7 @@ function Navbar() {
           ))}
 
           {/* Button Membership */}
-          <div className="bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-600 rounded-full py-1 px-3 text-white font-medium cursor-pointer ease-in-out transition-all duration-200 hover:scale-[1.03] will-change-transform">
+          <div className="bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 active:bg-blue-600 dark:hover:bg-blue-600 dark:active:bg-blue-600 rounded-full py-1 px-3 text-white font-medium cursor-pointer ease-in-out transition-all duration-200 hover:scale-[1.03] active:scale-[1.03] will-change-transform">
             Join now
           </div>
         </div>
@@ -90,11 +90,11 @@ function Navbar() {
         >
           <img
             src={showBurgerMenu ? "/close-burger-light.svg" : "/menu-light.svg"}
-            className="cursor-pointer w-6 min-w-6 opacity-50 hover:opacity-90 block dark:hidden"
+            className="cursor-pointer w-6 min-w-6 opacity-50 hover:opacity-90 active:opacity-90 block dark:hidden"
           ></img>
           <img
             src={showBurgerMenu ? "/close-burger-dark.svg" : "/menu-dark.svg"}
-            className="cursor-pointer w-6 min-w-6 opacity-70 hover:opacity-100 hidden dark:block"
+            className="cursor-pointer w-6 min-w-6 opacity-70 hover:opacity-100 active:opacity-100 hidden dark:block"
           ></img>
         </div>
       </div>
@@ -114,7 +114,7 @@ function Navbar() {
             className={({ isActive }) =>
               isActive
                 ? "opacity-100 flex justify-end"
-                : "opacity-50 hover:opacity-100 flex justify-end"
+                : "opacity-50 hover:opacity-100 active:opacity-100 flex justify-end"
             }
             to={link.to}
             onClick={() => setShowBurgerMenu(false)}

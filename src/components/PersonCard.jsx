@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import PropTypes from "prop-types"
 
 const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
-  
+
   const [popupState, setPopupState] = useState(false);
   const card = useRef(null);
   const popup = useRef(null);
@@ -71,7 +71,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
         {/* Photo */}
         <div className="h-75 overflow-hidden rounded-tl-4xl rounded-tr-4xl">
           <img
-            className="will-change-transform size-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.03]"
+            className="will-change-transform size-full object-cover transition-all duration-400 ease-in-out group-active:scale-[1.03] group-hover:scale-[1.03]"
             src={img}
             alt="photo"
           />
@@ -94,8 +94,8 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
         <div className={`will-change-auto overflow-y-auto duration-300 relative flex flex-col team2:h-max h-full min-w-70 team3:w-180 team2:w-150 w-full bg-white dark:bg-stone-800 p-0 team3:p-6 py-6 team2:mx-auto team2:rounded-2xl shadow-[0_0_5px_rgba(0,0,0,0.165)] ${popupState ? "" : "team2:translate-y-7 scale-[0.95]"}`}>
 
           {/* Close button */}
-          <img ref={popupCloseBtnLight} src="/close-light.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-50 transition-all duration-200 self-end block dark:hidden"></img>
-          <img ref={popupCloseBtnDark} src="/close-dark.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-60 transition-all duration-200 self-end hidden dark:block"></img>
+          <img ref={popupCloseBtnLight} src="/close-light.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-50 active:opacity-50 transition-all duration-200 self-end block dark:hidden"></img>
+          <img ref={popupCloseBtnDark} src="/close-dark.svg" className="absolute right-5 top-5 cursor-pointer fa-regular fa-xmark w-6 h-6 opacity-30 hover:opacity-60 active:opacity-60 transition-all duration-200 self-end hidden dark:block"></img>
 
           {/* Card Content */}
           <div className="p-7 team3:p-10 w-fit flex flex-col items-center">
@@ -110,7 +110,7 @@ const CardTeamMember = ({ name, role, bio, img, linkedin }) => {
             <span className="w-fit text-4xl team3:text-5xl font-semibold text-center mt-1">{name}</span>
 
             {/* LinkedIn */}
-            <a href={linkedin} target="_blank" className="mt-4 team3:mt-6 ml-0.5 size-6 opacity-90 hover:opacity-100 transition-opacity duration-200 hover:shadow-sm"><img className="" src="/linkedin-card.png" alt="linkedn-img" /></a>
+            <a href={linkedin} target="_blank" className="mt-4 team3:mt-6 ml-0.5 size-6 opacity-90 hover:opacity-100 active:opacity-100 transition-opacity duration-200 hover:shadow-sm active:shadow-sm"><img className="" src="/linkedin-card.png" alt="linkedn-img" /></a>
 
             {/* Bio */}
             <span className="mt-7 team3:mt-10">{bio}</span>
